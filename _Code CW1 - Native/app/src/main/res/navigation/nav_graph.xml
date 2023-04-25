@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tripListFragment">
+
+    <fragment
+        android:id="@+id/tripAddFragment"
+        android:name="vn.edu.greenwich.m_expense.ui.trip.TripAddFragment"
+        android:label="Add Trip"
+        tools:layout="@layout/fragment_trip_add" />
+    <fragment
+        android:id="@+id/tripListFragment"
+        android:name="vn.edu.greenwich.m_expense.ui.trip.list.TripListFragment"
+        android:label="Trip List"
+        tools:layout="@layout/fragment_trip_list" />
+    <fragment
+        android:id="@+id/tripDetailFragment"
+        android:name="vn.edu.greenwich.m_expense.ui.trip.TripDetailFragment"
+        android:label="Trip Detail"
+        tools:layout="@layout/fragment_trip_detail">
+    </fragment>
+    <fragment
+        android:id="@+id/tripUpdateFragment"
+        android:name="vn.edu.greenwich.m_expense.ui.trip.TripUpdateFragment"
+        android:label="Update Trip"
+        tools:layout="@layout/fragment_trip_update" />
+</navigation>

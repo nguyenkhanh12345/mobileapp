@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.trip.TripDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/fmTripDetailBottomAppBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            app:layout_constraintBottom_toBottomOf="@+id/fmTripDetailName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fmTripDetailName"
+            app:menu="@menu/menu_in_detail"
+            tools:ignore="BottomAppBar" />
+
+        <TextView
+            android:id="@+id/fmTripDetailName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fmTripDetailDestinationLabel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/label_destination"
+            android:background="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fmTripDetailName" />
+
+        <TextView
+            android:id="@+id/fmTripDetailDestination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/fmTripDetailDestinationLabel"
+            app:layout_constraintTop_toTopOf="@+id/fmTripDetailDestinationLabel" />
+
+        <TextView
+            android:id="@+id/fmTripDetailDateLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/label_date"
+            android:background="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/fmTripDetailDestinationLabel"
+            app:layout_constraintStart_toStartOf="@+id/fmTripDetailDestinationLabel"
+            app:layout_constraintTop_toBottomOf="@+id/fmTripDetailDestination" />
+
+        <TextView
+            android:id="@+id/fmTripDetailDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/fmTripDetailDestination"
+            app:layout_constraintStart_toStartOf="@+id/fmTripDetailDestination"
+            app:layout_constraintTop_toTopOf="@+id/fmTripDetailDateLabel" />
+
+        <TextView
+            android:id="@+id/fmTripDetailRiskLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/label_risk"
+            android:background="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/fmTripDetailDestinationLabel"
+            app:layout_constraintStart_toStartOf="@+id/fmTripDetailDestinationLabel"
+            app:layout_constraintTop_toBottomOf="@+id/fmTripDetailDate" />
+
+        <TextView
+            android:id="@+id/fmTripDetailRisk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/fmTripDetailDestination"
+            app:layout_constraintStart_toStartOf="@+id/fmTripDetailDestination"
+            app:layout_constraintTop_toTopOf="@+id/fmTripDetailRiskLabel" />
+
+        <TextView
+            android:id="@+id/fmTripDetailDescriptionLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/label_description"
+            android:background="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/fmTripDetailDestinationLabel"
+            app:layout_constraintStart_toStartOf="@+id/fmTripDetailDestinationLabel"
+            app:layout_constraintTop_toBottomOf="@+id/fmTripDetailRisk" />
+
+        <TextView
+            android:id="@+id/fmTripDetailDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/fmTripDetailDestination"
+            app:layout_constraintStart_toStartOf="@+id/fmTripDetailDestination"
+            app:layout_constraintTop_toTopOf="@+id/fmTripDetailDescriptionLabel" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fmTripDetailExpenseList"
+            android:name="vn.edu.greenwich.m_expense.ui.expense.list.ExpenseListFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fmTripDetailExpenseButton"
+            tools:layout="@layout/fragment_expense_list" />
+
+        <Button
+            android:id="@+id/fmTripDetailExpenseButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/label_add_expense"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/fmTripDetailRisk"
+            app:layout_constraintStart_toStartOf="@+id/fmTripDetailRiskLabel"
+            app:layout_constraintTop_toBottomOf="@+id/fmTripDetailRiskLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

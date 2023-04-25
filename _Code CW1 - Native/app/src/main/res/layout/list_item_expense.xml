@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/listItemExpenseDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/listItemExpenseTime"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_marginEnd="25dp"
+        android:textAlignment="textEnd"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/listItemExpenseAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/listItemExpenseAmount" />
+
+    <TextView
+        android:id="@+id/listItemExpenseAmount"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:textAlignment="textStart"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/listItemExpenseType"
+        app:layout_constraintEnd_toStartOf="@+id/listItemExpenseTime"
+        app:layout_constraintStart_toEndOf="@+id/listItemExpenseType"
+        app:layout_constraintTop_toTopOf="@+id/listItemExpenseType" />
+
+    <TextView
+        android:id="@+id/listItemExpenseType"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:textAlignment="textStart"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listItemExpenseDate" />
+
+    <TextView
+        android:id="@+id/listItemExpenseComment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="15dp"
+        android:textAlignment="textStart"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/listItemExpenseTime"
+        app:layout_constraintStart_toStartOf="@+id/listItemExpenseType"
+        app:layout_constraintTop_toBottomOf="@+id/listItemExpenseType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
